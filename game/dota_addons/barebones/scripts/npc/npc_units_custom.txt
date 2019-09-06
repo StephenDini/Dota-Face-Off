@@ -1,0 +1,30 @@
+"DOTAUnits"
+{
+	"Version" 	"1"
+// NPC for global xp and mana
+//------------------------------
+	"npc_dota_xp_global"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/development/invisiblebox.vmdl"
+		"Ability1"					"dota_ability_xp_global"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"BountyXP"					"0"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"StatusHealth"				"5000"
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+	}
+//NPC for Boost of Speed at the start of the game
+//---------------------------------------------- 
+	"npc_dota_start_speed_global"
+	{
+		"BaseClass"					"npc_dota_creature"
+		"Model"						"models/development/invisiblebox.vmdl"
+		"Ability1"                  "dota_ability_start_speed_global"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"BountyXP"					"0"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+		"StatusHealth"				"5000"
+		"TeamName"					"DOTA_TEAM_NEUTRALS"
+	}
+}

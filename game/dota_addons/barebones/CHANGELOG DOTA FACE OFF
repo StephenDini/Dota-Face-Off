@@ -1,0 +1,87 @@
+CHANGELOG DOTA FACE OFF
+
+------- LEGEND -------
+> - To Finish
+! - Not Finished Important
+x - Finished
+----------------------
+x add a haste rune for the first 3 minutes (implemented as just pure speed)
+x start xp aura after game start (horn  blows)
+x slardar fixed. 
+------------------------
+! Map
+  > improve map details [idea Mk1]
+  - some changes to the fountain and the map 
+  - moved location of the player spawn to make it easier to get to the lane
+  - added a gate to make it look like the exit 
+x fixed crash which was caused by illusions.
+x added passive xp aura for players at 6 per .5 interval
+x bared some blinking and tping on certain places
+x added pathing to the trees on both sides.
+x xp is not working correctly (changed from adding level to adding xp) {this broke the money at the start added fix but not sure how it broke.}
+----------------------------------
+x randomed character
+x increased strategy timer.                                                                 -- this is so the start wont load so quickly. Gives player time to chose starting items. 
+x set starting gold to 1500                                                                 -- NOTE [strategy time gold still unchanged?] change for balancing later.
+x set 3 dire towers which unlock the next towers                                            -- 
+x remove tp scrolls
+x removed boots of travel 1 and 2
+x fix boundies so furion cant tp                                                            
+x remove observers KEEP sentry                                                              
+x set 2 dire towers which unlock the next towers                                            
+x set up creeps for dire                                                                    -- May have to change how many spawn later
+x set up creeps for ancient    
+-- did not implement --                                                           
+x set up seige creeps for dire                                                               
+x set up seige creeps for radiant
+-----------------------
+x fix rosh
+x allow barracks to upgrade creeps
+x [not allowing megas for now] allow barracks to upgrade creeps to mega once all dead
+x scale back gold 
+x fix fountain location for dire                                                            -- no collision tho?
+x add radiant fountain
+x add normal shop
+x change tree respawn time to 2                                                             --  working.
+x remove heal from fountain
+x remove curier
+x remove secret shop
+x allow all items from shop
+x added a teleport to get from spawn to the field.                                          -- this is so the player can not purchase more then once. Furion will be a problem.
+x fix item regen
+x fix armlet
+x item recipie fixed. 
+> make a path to rosh [maybe]
+> fix radiant ranged creeps from being first
+x change respawn time
+x fix host? camer glitch [mostly fixed]
+> fix tangos
+> enable guide
+x droped items dont seem to share [that was a problem between keyboard and chair]
+x poissible issue with dire teleporter [seems fixed]
+> allow rune to be seen 
+x 3 levels at start
+x increase speed of each player. added initial boost of speed at start instead
+x set bounty rune spawn to 150 and power to 60
+x make spawn camps easier to manover around
+x creep path possibly fixed. needs testing. 
+
+
+--- STOPPING POINT ---
+
+comments that say testing are a work in progress. still not sure why they are nil
+you also added a info target and path corner
+remove when Finished
+
+----------------------
+suggestions
+---------------------
+
+!sort store by int, agi, str
+!allow custome guides
+> interesting idea if it can be done. pay gold to get a reroll
+!! scanning shows all vision
+
+
+maybe give aura a decay and let the creep giving the aura longer time to broadcast aura
+but shrink its radiaus and add one so both can have one.

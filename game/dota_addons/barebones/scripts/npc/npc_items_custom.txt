@@ -1,0 +1,250 @@
+"DOTAAbilities"
+{
+	
+	//=================================================================================================================
+	// Teleport Scroll
+	//=================================================================================================================
+	"item_tpscroll"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"46"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"Model"							"models/props_gameplay/tpscroll01.mdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCooldown"				"70.0"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"3.0"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		"ItemCost"						"100"
+		"ItemShopTags"					"consumable;tutorial"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"0"
+		"ItemAliases"					"tp;town portal scroll"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"SideShop"						"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"minimun_distance"		"70"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maximum_distance"		"575"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"200"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Recipe: Travel Boots
+	//=================================================================================================================
+	"item_recipe_travel_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"47"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2000"	
+		"ItemShopTags"					""
+		"ItemPurchasable"				"0"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_travel_boots"
+		"ItemRequirements"
+		{
+			"01"						"item_boots"
+		}
+	}
+	
+	//=================================================================================================================
+	// Recipe: Travel Boots
+	//=================================================================================================================
+	"item_recipe_travel_boots_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"219"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.mdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		"ItemPurchasable"				"0"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_travel_boots_2"
+		"ItemRequirements"
+		{
+			"01"						"item_travel_boots;item_recipe_travel_boots"
+		}
+	}
+	
+	//=================================================================================================================
+	// Travel Boots
+	//=================================================================================================================
+	"item_travel_boots"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"48"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45.0"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"3.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		"ItemCost"						"4450"
+		"ItemShopTags"					"teleport;move_speed"
+		"ItemQuality"					"common"
+		"ItemPurchasable"				"0"
+		"ItemAliases"					"bot;boots of travel"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"MaxUpgradeLevel"				"2"
+		"ItemBaseLevel"					"1"
+		
+		"UpgradesItems"					"item_travel_boots"
+		"UpgradeRecipe"					"item_recipe_travel_boots"
+
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement_speed"	"100"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Courier
+	//=================================================================================================================
+	"item_courier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"45"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"120"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"0"
+		"ItemAliases"					"donkey;chicken;animal courier"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"7.0"
+		"ItemSupport"					"1"
+
+	}
+
+	//=================================================================================================================
+	// Observer Wards
+	//=================================================================================================================
+	"item_ward_observer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"42"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"Model"							"models/props_gameplay/observer_ward_bundle.mdl"
+		
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"1.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"75"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"0"
+		"ItemAliases"					"observer ward"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemStockMax"					"4"
+		"ItemStockInitial"				"2"
+		"ItemStockTime"					"180.0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemSupport"					"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime"				"420"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_range"			"1600"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"health"				"200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_minutes_tooltip"				"7"
+			}
+		}
+	}
+}

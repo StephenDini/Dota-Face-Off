@@ -1,0 +1,133 @@
+"DOTAAbilities"
+{
+	"Version"   "1"
+
+// Global xp and gold for both teams. 
+//---------------------------
+	"dota_ability_xp_global"
+	{
+		"BaseClass"          			    "ability_datadriven"
+		"AbilityName"           			"dota_ability_xp_global"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+
+		"Modifiers"
+		{
+			"modifier_dota_ability_xp_global"
+			{
+				"IsHidden"				"1"
+				"Passive"				"1"
+				
+				"Aura"					"modifier_get_xp_global"
+				"Aura_Radius"			"9500"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+				"Aura_ApplyToCaster"	"0"
+				"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"10"
+				}
+
+				"ThinkInterval"	".5"
+
+				"OnIntervalThink"
+				{
+					"GrantXPGold"
+					{
+						"Target"
+						{
+							"Center"		"CASTER"
+							"radius"		"9500"
+							"Types"			"DOTA_UNIT_TARGET_HERO"
+							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+						}
+						"XPAmount"		"6"
+						"SplitEvenly"	"0"
+						"GoldAmount"	"0"
+						"ReliableGold"	"0"
+						"PlayAlert"		"0"
+
+					}
+				}
+			}
+
+			"modifier_get_xp_global"
+			{
+
+				"Passive"       "1"
+				"EffectName"	""
+				"TextureName"	"holdout_voodoo"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"10"
+				}
+				
+				
+			}
+		}
+	}
+
+// Gives boost of speed for the first 3 minutes
+//-------------------------------------	
+	"dota_ability_start_speed_global"
+	{
+		"BaseClass"          			    "ability_datadriven"
+		"AbilityName"           			"dota_ability_start_speed_global"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+
+		"Modifiers"
+		{
+			"modifier_dota_ability_start_speed_global"
+			{
+				"IsHidden"				"1"
+				"Passive"				"1"
+				"Duration"              "120"
+				"Aura"					"modifier_get_start_speed_global"
+				"Aura_Radius"			"20000"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
+				"Aura_ApplyToCaster"	"0"
+				"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+ 
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"300"
+				}
+			}
+
+			"modifier_get_start_speed_global"
+			{
+
+				"Passive"       "1"
+				"EffectName"	""
+				"Duration"      "120"
+				"TextureName"	"holdout_voodoo"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"300"
+				}
+				
+				
+			}
+		}
+	}
+}
